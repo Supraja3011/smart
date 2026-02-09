@@ -315,14 +315,14 @@ def render_report_home():
                     photo_path = save_path
 
                 add_complaint(
-                    issue_type,
-                    intensity,
-                    st.session_state.get("clicked_location") or {},
-                    st.session_state.get("clicked_location", {}).get("lat"),
-                    st.session_state.get("clicked_location", {}).get("lon"),
-                    description,
-                    photo_path,
-                )
+                issue_type,
+                intensity,
+                st.session_state.get("clicked_location") or {},
+                st.session_state.get("clicked_location", {}).get("lat"),
+                st.session_state.get("clicked_location", {}).get("lon"),
+                description,
+                photo_path,
+            )
 
                 st.success("Complaint submitted successfully!")
 
