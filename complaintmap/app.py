@@ -317,7 +317,7 @@ def render_report_home():
                 add_complaint(
                     issue_type,
                     intensity,
-                    clicked = st.session_state.get("clicked_location") or {}
+                    st.session_state.get("clicked_location") or {},
                     st.session_state.get("clicked_location", {}).get("lat"),
                     st.session_state.get("clicked_location", {}).get("lon"),
                     description,
