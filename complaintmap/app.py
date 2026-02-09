@@ -318,8 +318,8 @@ def render_report_home():
                     issue_type,
                     intensity,
                     clicked = st.session_state.get("clicked_location") or {}
-                    lat = clicked.get("lat")
-                    lon = clicked.get("lon")
+                    st.session_state.get("clicked_location", {}).get("lat"),
+                    st.session_state.get("clicked_location", {}).get("lon"),
                     description,
                     photo_path,
                 )
