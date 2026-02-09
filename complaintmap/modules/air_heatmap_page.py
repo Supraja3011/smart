@@ -14,7 +14,7 @@ HYD_LON_MIN, HYD_LON_MAX = 78.1, 78.9
 
 # ================= SESSION STATE (LAST KNOWN AQI) =================
 if "last_aqi_value" not in st.session_state:
-    st.session_state["last_aqi_value"] = None
+    st.session_state.get["last_aqi_value"] = None
     st.session_state["last_aqi_time"] = None
 
 # ================= AQI UTILS =================
