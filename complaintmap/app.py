@@ -317,8 +317,9 @@ def render_report_home():
                 add_complaint(
                     issue_type,
                     intensity,
-                    st.session_state["clicked_location"]["lat"],
-                    st.session_state["clicked_location"]["lon"],
+                    clicked = st.session_state.get("clicked_location") or {}
+                    lat = clicked.get("lat")
+                    lon = clicked.get("lon")
                     description,
                     photo_path,
                 )
