@@ -110,7 +110,7 @@ def render():
 
     else:
         # FALLBACK TO LAST KNOWN AQI
-        if st.session_state.get["last_aqi_value"] is not None:
+        if st.session_state.get("last_aqi_value") is not None:
             value_display = st.session_state["last_aqi_value"]
             label, color = get_aqi_info(value_display)
             last_time = (
